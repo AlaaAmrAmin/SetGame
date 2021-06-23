@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShapeView: View {
-    let shape: Theme.Shape
+    let shape: ShapeTheme.Shape
     let aspectRatio: CGFloat
     
     var body: some View {

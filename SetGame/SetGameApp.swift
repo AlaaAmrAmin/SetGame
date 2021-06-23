@@ -11,7 +11,9 @@ import SwiftUI
 struct SetGameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let game = SetGame(allCardsContent: ShapeTheme.createAllThemeCombinations(), displayedCardsCount: Constants.initialNumberOfCards)
+            let gameViewModel = SetGameViewModel(game: game)
+            ShapeSetGameView(game: gameViewModel)
         }
     }
 }
