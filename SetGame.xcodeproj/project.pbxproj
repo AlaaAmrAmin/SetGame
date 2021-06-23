@@ -14,6 +14,7 @@
 		04245C1A2680DB3B008547D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04245C192680DB3B008547D5 /* ContentView.swift */; };
 		04245C1C2680DB3B008547D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04245C1B2680DB3B008547D5 /* Assets.xcassets */; };
 		04245C1F2680DB3B008547D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04245C1E2680DB3B008547D5 /* Preview Assets.xcassets */; };
+		04AD3D152682B19C00A9044C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3D142682B19C00A9044C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		04245C1B2680DB3B008547D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04245C1E2680DB3B008547D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04245C202680DB3B008547D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AD3D142682B19C00A9044C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				04245C192680DB3B008547D5 /* ContentView.swift */,
 				041AD23F2681668E00FA3AFE /* ShapeView.swift */,
 				041AD23B26815DC000FA3AFE /* Diamond.swift */,
+				04AD3D142682B19C00A9044C /* Constants.swift */,
 				04245C1B2680DB3B008547D5 /* Assets.xcassets */,
 				04245C202680DB3B008547D5 /* Info.plist */,
 				04245C1D2680DB3B008547D5 /* Preview Content */,
@@ -152,6 +155,7 @@
 				041AD2432681FFD800FA3AFE /* Theme.swift in Sources */,
 				041AD2402681668E00FA3AFE /* ShapeView.swift in Sources */,
 				04245C182680DB3B008547D5 /* SetGameApp.swift in Sources */,
+				04AD3D152682B19C00A9044C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
