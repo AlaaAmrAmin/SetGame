@@ -7,9 +7,25 @@
 
 import Foundation
 
-struct Theme {
+struct ShapeTheme {
     let shape: Shape
     let numberOfShapes: Int
+    
+    static func createAllThemeCombinations() -> [ShapeTheme] {
+        var combinations = [ShapeTheme]()
+
+        [1, 2, 3].forEach { count in
+            ShapeTheme.Shape.Shading.allCases.forEach { shading in
+                ShapeTheme.Shape.Color.allCases.forEach { color in
+                    combinations.append(ShapeTheme(shape: .rectangle(shading: shading, color: color), numberOfShapes: count))
+                    combinations.append(ShapeTheme(shape: .oval(shading: shading, color: color), numberOfShapes: count))
+                    combinations.append(ShapeTheme(shape: .diamond(shading: shading, color: color), numberOfShapes: count))
+                }
+            }
+        }
+        
+        return combinations
+    }
     
     enum Shape {
         case rectangle(shading: Shading, color: Color)
@@ -30,13 +46,13 @@ struct Theme {
             }
         }
         
-        enum Shading {
+        enum Shading: CaseIterable {
             case solid
             case shaded
             case stroked
         }
         
-        enum Color {
+        enum Color: CaseIterable {
             case pink
             case purple
             case green
