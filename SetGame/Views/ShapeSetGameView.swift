@@ -12,9 +12,12 @@ struct ShapeSetGameView: View {
     
     var body: some View {
         VStack {
-            AspectVGrid(items: game.cards, itemMinimumWidth: 60, aspectRatio: 2/3) {
-                CardView(card: $0)
+            AspectVGrid(items: game.cards, itemMinimumWidth: 60, aspectRatio: 2/3) { card in
+                CardView(card: card)
                     .padding(4)
+                    .onTapGesture {
+                        game.selectCard(card)
+                    }
             }
             .padding(.horizontal)
             

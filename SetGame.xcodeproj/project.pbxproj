@@ -14,6 +14,7 @@
 		04245C1A2680DB3B008547D5 /* ShapeSetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04245C192680DB3B008547D5 /* ShapeSetGameView.swift */; };
 		04245C1C2680DB3B008547D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04245C1B2680DB3B008547D5 /* Assets.xcassets */; };
 		04245C1F2680DB3B008547D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04245C1E2680DB3B008547D5 /* Preview Assets.xcassets */; };
+		0425026A2684FFCF0043F65C /* SetValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042502692684FFCF0043F65C /* SetValidator.swift */; };
 		04AD3D0C2682405600A9044C /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3D0B2682405600A9044C /* SetGame.swift */; };
 		04AD3D1226825F4700A9044C /* AspectVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3D1126825F4700A9044C /* AspectVGrid.swift */; };
 		04AD3D152682B19C00A9044C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3D142682B19C00A9044C /* Constants.swift */; };
@@ -31,6 +32,7 @@
 		04245C1B2680DB3B008547D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04245C1E2680DB3B008547D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04245C202680DB3B008547D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		042502692684FFCF0043F65C /* SetValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetValidator.swift; sourceTree = "<group>"; };
 		04AD3D0B2682405600A9044C /* SetGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 		04AD3D1126825F4700A9044C /* AspectVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectVGrid.swift; sourceTree = "<group>"; };
 		04AD3D142682B19C00A9044C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				04AD3D0B2682405600A9044C /* SetGame.swift */,
 				041AD2422681FFD800FA3AFE /* ShapeTheme.swift */,
+				042502692684FFCF0043F65C /* SetValidator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				041AD2432681FFD800FA3AFE /* ShapeTheme.swift in Sources */,
 				041AD2402681668E00FA3AFE /* ShapeView.swift in Sources */,
 				04245C182680DB3B008547D5 /* SetGameApp.swift in Sources */,
+				0425026A2684FFCF0043F65C /* SetValidator.swift in Sources */,
 				04AD3D0C2682405600A9044C /* SetGame.swift in Sources */,
 				04AD3D152682B19C00A9044C /* Constants.swift in Sources */,
 			);

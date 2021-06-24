@@ -12,7 +12,7 @@ struct ShapeView: View {
     let aspectRatio: CGFloat
     
     var body: some View {
-        switch shape {
+        switch shape.symbol {
             case .rectangle:
                 applyShading(to: Rectangle()).aspectRatio(aspectRatio, contentMode: .fit)
                 
@@ -40,24 +40,25 @@ struct ShapeView: View {
 }
 
 struct ShapeView_Previews: PreviewProvider {
+    typealias Shape = ShapeTheme.Shape
     static var previews: some View {
         VStack {
             HStack {
-                ShapeView(shape: .rectangle(shading: .solid, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .rectangle(shading: .stroked, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .rectangle(shading: .shaded, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .solid, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .stroked, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .shaded, color: .pink), aspectRatio: 2/1)
             }
                         
             HStack {
-                ShapeView(shape: .oval(shading: .solid, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .oval(shading: .stroked, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .oval(shading: .shaded, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .solid, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .stroked, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .rectangle, shading: .shaded, color: .pink), aspectRatio: 2/1)
             }
             
             HStack {
-                ShapeView(shape: .diamond(shading: .solid, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .diamond(shading: .stroked, color: .pink), aspectRatio: 2/1)
-                ShapeView(shape: .diamond(shading: .shaded, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .diamond, shading: .solid, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .diamond, shading: .stroked, color: .pink), aspectRatio: 2/1)
+                ShapeView(shape: Shape(symbol: .diamond, shading: .shaded, color: .pink), aspectRatio: 2/1)
             }
         }
     }

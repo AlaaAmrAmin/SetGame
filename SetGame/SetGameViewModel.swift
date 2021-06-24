@@ -8,13 +8,19 @@
 import Foundation
 
 class SetGameViewModel: ObservableObject {
+    typealias Card = SetGame<ShapeTheme>.Card
+    
     @Published private var game: SetGame<ShapeTheme>
     
-    var cards: [SetGame<ShapeTheme>.Card] { game.displayedCards }
+    var cards: [Card] { game.displayedCards }
     var hasDealtAllCards: Bool { cards.count == game.allCards.count }
     
     init(game: SetGame<ShapeTheme>) {
         self.game = game
+    }
+    
+    func selectCard(_ card: Card) {
+        game.selectCard(card)
     }
     
     func dealThreeMoreCards() {
