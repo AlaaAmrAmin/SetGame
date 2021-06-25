@@ -12,7 +12,7 @@ struct ShapeSetGameView: View {
     
     var body: some View {
         VStack {
-            AspectVGrid(items: game.cards, itemMinimumWidth: 60, aspectRatio: 2/3) { card in
+            AspectVGrid(items: game.cards, itemMinimumWidth: DrawingConstants.cardMinimumWidth, aspectRatio: DrawingConstants.cardAspectRatio) { card in
                 CardView(card: card)
                     .padding(4)
                     .onTapGesture {
@@ -35,7 +35,7 @@ struct ShapeSetGameView: View {
     }
     
     private func dealMoreCardsButton(isDisabled: Bool) -> some View {
-        let colorOpacity = isDisabled ? 0.5 : 1
+        let colorOpacity = isDisabled ? DrawingConstants.disabledButtonColorOpacity : 1
         return Button(action: {
             game.dealThreeMoreCards()
         }, label: {
@@ -45,7 +45,7 @@ struct ShapeSetGameView: View {
         })
         .disabled(isDisabled)
         .background(
-            RoundedRectangle(cornerRadius: 6)
+            RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)
                 .foregroundColor(.yellow)
                 .opacity(colorOpacity)
         )
@@ -59,7 +59,15 @@ struct ShapeSetGameView: View {
                 .font(.title2)
                 .padding()
         })
-        .background(RoundedRectangle(cornerRadius: 6).foregroundColor(.yellow))
+        .background(RoundedRectangle(cornerRadius: DrawingConstants.buttonCornerRadius)
+                        .foregroundColor(.yellow))
+    }
+    
+    private struct DrawingConstants {
+        static let cardMinimumWidth: CGFloat = 60
+        static let cardAspectRatio: CGFloat = 2/3
+        static let buttonCornerRadius: CGFloat = 6
+        static let disabledButtonColorOpacity: Double = 0.5
     }
 }
 

@@ -31,11 +31,16 @@ struct ShapeView: View {
                 shapeView
 
             case .stroked:
-                shapeView.strokeBorder(lineWidth: 3)
+                shapeView.strokeBorder(lineWidth: DrawingConstants.borderWidth)
 
             case .shaded:
-                shapeView.strokeBorder(lineWidth: 3).background(shapeView.opacity(0.3))
+                shapeView.strokeBorder(lineWidth: DrawingConstants.borderWidth).background(shapeView.opacity(DrawingConstants.shadingOpacity))
         }
+    }
+    
+    private struct DrawingConstants {
+        static let borderWidth: CGFloat = 3
+        static let shadingOpacity: Double = 0.3
     }
 }
 
