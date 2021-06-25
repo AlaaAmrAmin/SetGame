@@ -33,11 +33,9 @@ struct SetGame<CardContent: SetValidator> {
     }
     
     mutating func selectCard(_ card: Card) {
-        guard card.status != .unmatched else { return }
-        
         guard let cardIndex = allCards.firstIndex(where: { $0.id == card.id }) else { return }
         
-        let newStatus: Card.Status = card.status == .unselected ? .selected : .unselected
+        let newStatus: Card.Status = card.status == .selected ? .unselected : .selected
         allCards[cardIndex].status = newStatus
         
         resetUnmatchedCards()
